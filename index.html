@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Daily Productivity Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Daily Productivity Planner</h1>
+
+<h3>Select Date</h3>
+<input type="date" id="date">
+
+<h3>Today's Routine</h3>
+<div id="habitList"></div>
+
+<input id="habitName" placeholder="Habit name">
+<input id="habitTime" placeholder="Duration">
+<input id="habitAlarm" type="time">
+<button onclick="addHabit()">Add Habit</button>
+
+<div class="progress">
+<h2 id="percent">0%</h2>
+<p id="message"></p>
+</div>
+
+<h3>Daily Notes</h3>
+<textarea id="notes" rows="4"></textarea>
+<button onclick="saveNotes()">Save Notes</button>
+
+<h3>Streak</h3>
+<p id="streak"></p>
+
+<button onclick="exportData()">Export Data</button>
+
+</div>
+
+<script src="storage.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
